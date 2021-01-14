@@ -11,9 +11,11 @@ namespace MyChip8
             //Init
             Console.WriteLine("Enter the filename of the rom you want to load (from roms folder): ");
             string romName = Console.ReadLine();
+            Console.WriteLine("Enter target frame rate: ");
+            int frameRate = Int32.Parse(Console.ReadLine());
             Emu emu = new Emu(".\\roms\\" + romName);
             Raylib.InitWindow(640, 320, "My Chip-8 Emu - " + romName);
-            Raylib.SetTargetFPS(120);
+            Raylib.SetTargetFPS(frameRate);
 
             //Screen Texture
             Color[] pixelArray = new Color[64 * 32];
