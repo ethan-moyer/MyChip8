@@ -11,8 +11,8 @@ namespace MyChip8
             //Init
             Console.WriteLine("Enter the filename of the rom you want to load (from roms folder): ");
             string romName = Console.ReadLine();
-            Emu emu = new Emu("B:\\Documents\\Godot\\Chip8\\roms\\pong.c8");
-            Raylib.InitWindow(640, 320, "My Chip-8 Emu");
+            Emu emu = new Emu(".\\roms\\" + romName);
+            Raylib.InitWindow(640, 320, "My Chip-8 Emu - " + romName);
             Raylib.SetTargetFPS(120);
 
             //Screen Texture
